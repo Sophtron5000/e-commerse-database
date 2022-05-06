@@ -10,15 +10,14 @@ Product.belongsTo(Category, {
 });
 Category.belongsTo(Product)
 
-// Products belongToMany Tags (through ProductTag)
 Product.belongToMany(Tag,{
   through: {
     model: 'productTag',
     unique: false
   }
-})
+});
+Tag.belongsToMany(Product)
 
-// Tags belongToMany Products (through ProductTag)
 
 module.exports = {
   Product,
@@ -26,3 +25,4 @@ module.exports = {
   Tag,
   ProductTag,
 };
+//do i need to make a separate association for the reverse association
