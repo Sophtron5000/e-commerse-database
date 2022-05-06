@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Product, product, Tag, ProductTag } = require('../../models');
+const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // The `/api/products` endpoint REFERENCE TRAVELER.JS
 
